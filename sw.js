@@ -1,6 +1,6 @@
 // Offline support: cache the app files. Bump VERSION whenever you change any file.
-const VERSION = 'budget-v1';
-const FILES = ['./', './index.html', './shared.js', './manifest.json', './icons/icon-180.png', './icons/icon-192.png', './icons/icon-512.png'];
+const VERSION = 'budget-v2';
+const FILES = ['./', './index.html', './shared.js', './manifest.json', './icon-180.png', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', e => { e.waitUntil(caches.open(VERSION).then(c => c.addAll(FILES))); self.skipWaiting(); });
 self.addEventListener('activate', e => {
